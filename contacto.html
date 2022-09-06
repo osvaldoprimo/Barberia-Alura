@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="./reset.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="./imagenes/logo.png" alt=""> </h1>
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                          <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                          <a class="nav-link" href="./productos.html">Productos</a>
+                          <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </header>
+
+        <main class="fondo">
+            <form>
+                <label for="nombreApellido">Nombre y apellido</label>
+                <input type="text" id="nombreApellido" class="input-padron" required> <!--required se coloca para que ese campo sea de llenado obligatorio-->
+
+                <label for="correoElectronico">Correo Electrónico</label>
+                <input type="email" id="correoElectronico"class="input-padron" required placeholder="email@dominio.com">
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono"class="input-padron" required placeholder="(XX) XXXX XXXX">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea cols="70" rows="10" id="mensaje" class="input-padron" required> </textarea>
+
+                <fieldset> <!--se usa en lugar de div, para cuando los campos son de la misma familia o tipo-->
+                    <legend>¿Cómo le gustaría que lo contactemos?</legend>
+
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label> <!--el value es una buena práctica ponerlo-->
+
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+                     <!--el "name="contacto"" es para agrupar en una misma familia los 3 valores. De esta forma, solo puedo seleccionar uno de ellos, y no más-->
+
+                    <label for="radio-whatsapp"><input type="radio"  name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label> <!--el "checked" se agrega para dejar marcada esa casilla-->
+                </fieldset>
+
+                <fieldset>
+                    <legend>¿En cuál horario prefiere ser atendido?</legend>
+                    <select>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+
+                
+
+                <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>     <!--al escribirlos así, el input dentro de la etiqueta label, evito usar el "id" y el "for", ya que los dejo vinculados así-->
+
+
+                <input type="submit" value="Enviar Formulario" class="enviar">
+
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08 a 20 hs</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>08 a 20 hs</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08 a 20 hs</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </main>
+
+        <footer>
+            <img src="./imagenes/logo-blanco.png" alt="Logo de la Barbería Alura">
+            <p class="copyright">&copy Copyright Barbería Alura - 2022</p>
+        </footer>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</html>
+
+
+
+
+
+

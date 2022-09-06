@@ -1,0 +1,312 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0; /*20 px para superior e inferior y 0 para derecha e izquierda*/
+}
+
+.caja{
+    width: 940px;   /*940 porque queremos que ocupe el 70% del total del  ancho, que es 1280 px */
+    position: relative;  /*relative respecto al posicionamiento absoluto de los elementos*/
+    margin: 0 auto; /*margen 0 para arriba y abajo, y auto para derecha e izquierda*/
+}
+
+.navbar{
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+
+.navbar li{
+    display: inline;
+    margin: 0 0 0 15px; /*aquí aplico margen 0 para arriba, derecha y abajo, y margen 15 para la izquierda*/
+}
+
+.navbar a{
+    text-transform: uppercase; /*esto es para mayuscula*/
+    color: black;
+    font-weight: bold;  /*para negrita*/
+    font-size: 22px;
+    text-decoration: none; /*esto es para sacarle el subrayado al texto*/
+}
+
+.navbar a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+.productos{
+    width: 940p;
+    margin: 0 auto;
+    padding: 50px;
+    background: linear-gradient(#fefefe, #888888);
+}
+
+.imgProducto{
+    width: 100%;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 0.5%; /*valor 0 para arriba y abajo, y 1.5 para los laterales*/
+    margin-left: 20px;
+    padding: 20px 10px; /* 30 px en la vertical,  20px en la horizontal*/
+    border: 2px solid #000000; /*primero se define el width, luego el style y finalmente el color*/
+    border-radius: 10px;
+    background: rgba( 187, 187, 187, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.productos li:hover{
+    border-color: #c78c19;
+    
+}
+
+.productos li:active{
+    border-color: #088c19;
+}
+
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+.productos li:hover h2{   /*acá lo que hago es afectar con ese cambio solo al h2*/
+    font-size: 33px;
+}
+
+.descripcion_producto{
+    font-size: 18px;
+}
+
+.precio_producto{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(./imagenes/bg.jpg);
+    padding: 40px;
+}
+.copyright{
+    color: #ffffff;
+    font-size: 13px;
+    margin: 20px;
+}
+
+.fondo{
+    background: linear-gradient(#fefefe, #888888);
+    padding-bottom: 1.5%;
+}
+
+form{
+    width: 100%;
+    margin: 1.5% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+.input-padron{  /*puedo aplicar las mismas características a distintos selectores que separaré con coma*/
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.enviar:hover{
+    background: darkorange;
+    transition: 1s;
+    cursor: pointer; /*esto se hace para cambiar el cursor por la manito*/
+    transform: scale(1.2);
+}
+
+
+table{
+    margin: auto;
+    background: white;
+}
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+
+/* Aquí inicia el CSS para nuestro index*/
+
+.banner{
+    width: 100%;
+}
+
+.bloquePrincipal{
+    padding: 3em 0;
+    background: #fefefe;
+    width: 940px; /*es una buena práctica usar los 940px cuando queremos centrar un elemento*/
+    margin: 0 auto;
+}
+
+.tituloPrincipal{
+    text-align: center;
+    font-size: 2em; /*2em significa que queremos darle 2 veces el tamaño original que el navegador da a esa fuente*/
+    margin: 0 0 1em;
+    clear: left; /* a esto lo pongo para que el float con afecte a los titulos*/
+}
+
+.tituloPrincipal::first-letter{
+    font-weight: bold;  /*pseudoelemento que se usa para cambiar un atributo solo de la primera letra del titulo*/
+}
+
+.bloquePrincipal p{
+    margin: 0 0 1em;
+}
+
+.bloquePrincipal strong{
+    font-weight: bold;
+}
+
+.bloquePrincipal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0; /*0 en superior, 20 a la derecha, 20 inferior 7 0 izquierda*/
+}
+
+.mapa{
+    padding: 3em 0; /*queremos 3 veces el tamaño de la fuente que está configurada por defecto*/
+    background: linear-gradient(#fefefe, #888888);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapaContenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenidoDiferenciales{
+    width: 640px;
+    margin: 0 auto; /*0 para arriba y abajo y auto para los laterales*/
+}
+
+.listaDiferenciales{
+    width: 40%;        /*aquí digo que la lista ocupará el 40% de los 640px del .contenidoDiferenciales*/
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5; /*interlineado 1.5*/
+}
+
+.items::before{
+    content: "★" /*pseudoelemento que uso para agregar algo antes de*/
+}
+
+.items:first-child{
+    font-weight: bold; /*modificando el primer item de la lista*/
+}
+
+.imagenDiferenciales{
+    width: 60%;          /*aquí digo que la imagen ocupará el 60% de los 640px del .contenidoDiferenciales*/
+    box-shadow: 10px 10px 30px 10px black;
+}
+
+.imagenDiferenciales:hover{
+    opacity: 0.3;
+    transition: 400ms; /*400 milisegundos*/
+}
+
+.video{
+    width: 560px;
+    margin: 1em auto; /*auto a los costados para centralizar*/
+}
+
+@media screen and (max-width:480px) {
+    h1{
+        text-align:left; /*recordar que en este caso el h1 es el logo*/
+    }
+
+    .navbar{
+        position:fixed;
+    }
+
+
+    .caja, .bloquePrincipal, .mapaContenido, .contenidoDiferenciales, .video{
+        width: auto;
+    }
+
+    .listaDiferenciales, .imagenDiferenciales{
+        width: 100%;
+    }
+    .productos li{
+        display:block;
+        margin: auto;
+        margin-top: 2.5%;
+        width: 40%;
+    }
+    .productos{
+        padding: 0;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    .imgProducto{
+        width: 100%;
+
+        }
+    
+
+    .enviar{
+        font-size: 15px;
+    }
+}
